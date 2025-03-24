@@ -7,15 +7,19 @@ use App\Http\Controllers\RecipeDetailController;
 use App\Http\Controllers\TodoController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/todo', [TodoController::class, 'index'])->name('todo');
 Route::post('/todo/add', [TodoController::class, 'submit'])->name('submit-todo');
 Route::post('/todo/edit', [TodoController::class, 'update'])->name('update-todo');
 Route::post('/todo/delete', [TodoController::class, 'delete'])->name('delete-todo');
 
-Route::get('/', [DishController::class, 'index'])->name('index');
-Route::post('/add', [DishController::class, 'addDish'])->name('add-dish');
-Route::post('/edit', [DishController::class, 'editDish'])->name('edit-dish');
-Route::post('/delete', [DishController::class, 'deleteDish'])->name('delete-dish');
+Route::get('/dish', [DishController::class, 'index'])->name('index');
+Route::post('/dish/add', [DishController::class, 'addDish'])->name('add-dish');
+Route::post('/dish/edit', [DishController::class, 'editDish'])->name('edit-dish');
+Route::post('/dish/delete', [DishController::class, 'deleteDish'])->name('delete-dish');
 
 Route::get('/recipes/{dishId}', [RecipeController::class, 'recipeView'])->name('recipes');
 Route::post('/recipes/{dishId}/add', [RecipeController::class, 'addDish'])->name('add-recipe');
