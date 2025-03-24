@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    padding: 1vh 2vh;
+}
+
+.topbar{
+    margin: 2vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar button{
+    border: none;
+    background-color: white;
+    font-size: large;
+    font-weight: 500;
+    text-decoration: underline;
+    
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 2vh;
+    border-bottom: 2px solid black;
+    width: 70%;
+}
+
+.head p{
+    font-size: 20px;
+}
+
+#addForm, #editForm{
+    margin: 2vh 0 1vh;
+    border: 1px solid rgb(47, 47, 47);
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2vh 2vw;
+}
+
+.alterButtons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.alterButtons button{
+    margin: 2vh 0 1vh 1vw;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 15px;
+
+    cursor: pointer;
+}
+
+#addBtn{
+    background: rgb(0, 139, 194);
+}
+
+#deleteBtn{
+    background: rgb(213, 0, 0);
+}
+
+.editBtn, a{
+    background-color: white;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+table,
+th,
+td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 40vw;
+}
+
+.desc form{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    resize: none;
+    width: 39.5vw;
+    height: 30vh;
+    border: 1px solid black;
+}
+
+.descButtons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.desc button{
+    margin: 2vh 0 1vh 1vw;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 15px;
+
+    cursor: pointer;
+}
+
+#editDesc{
+    color: black;
+}
+
+#saveDesc{
+    background: rgb(0, 139, 194);
+}
+
+th:first-child, td:first-child{
+    width: 5vw;
+}
